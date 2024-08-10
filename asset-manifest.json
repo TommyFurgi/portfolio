@@ -1,15 +1,24 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.c98201e2.css",
-    "main.js": "/portfolio/static/js/main.0b0664fd.js",
+    "main.js": "/portfolio/static/js/main.044b0574.js",
     "static/media/profile-2.jpg": "/portfolio/static/media/profile-2.1bdbf08591c6c7e7e73f.jpg",
+    "static/media/screenshot3.png": "/portfolio/static/media/screenshot3.8f3250feeeea18f5aaf1.png",
     "static/media/profile-1.jpg": "/portfolio/static/media/profile-1.0cef1fb80ee2439dc638.jpg",
+    "static/media/screenshot2.png": "/portfolio/static/media/screenshot2.c4996122099e7fe8786a.png",
+    "static/media/screenshot1.png": "/portfolio/static/media/screenshot1.72bd2bb81c5245a85e55.png",
+    "static/media/overview.png": "/portfolio/static/media/overview.788def05f46d76cd2630.png",
+    "static/media/screenshot-data-visualization.png": "/portfolio/static/media/screenshot-data-visualization.9722d1539d73b49c8d3b.png",
+    "static/media/screenshot-product-management.png": "/portfolio/static/media/screenshot-product-management.3dc5ca1aa5131c745270.png",
+    "static/media/screenshot-invoice-management.png": "/portfolio/static/media/screenshot-invoice-management.74c1b0dd21ea667212db.png",
+    "static/media/screenshot-client-management.png": "/portfolio/static/media/screenshot-client-management.884b83edd2da32828064.png",
+    "static/media/TomaszFurgalaCV.pdf": "/portfolio/static/media/TomaszFurgalaCV.5890bd2efb8c8b90f1fe.pdf",
     "index.html": "/portfolio/index.html",
     "main.c98201e2.css.map": "/portfolio/static/css/main.c98201e2.css.map",
-    "main.0b0664fd.js.map": "/portfolio/static/js/main.0b0664fd.js.map"
+    "main.044b0574.js.map": "/portfolio/static/js/main.044b0574.js.map"
   },
   "entrypoints": [
     "static/css/main.c98201e2.css",
-    "static/js/main.0b0664fd.js"
+    "static/js/main.044b0574.js"
   ]
 }
