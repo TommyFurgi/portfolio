@@ -82,11 +82,11 @@
 }
 
 
-  .address-list p {
+.address-list p {
     font-size: 1.6rem;
     margin: 0; 
     margin-left: 10px;
-  }
+}
 
 .contact-list li {
     margin: 15px 0; 
@@ -195,6 +195,7 @@
 
     .address-list p, 
     .contact-list a {
+        font-size: 1rem;
         margin-left: 0; 
         text-align: left;
     }
