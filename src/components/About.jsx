@@ -1,10 +1,11 @@
 import React from 'react';
 import profile from '../assets/images/profile-2.jpg';
 import '../styles/About.css';
+import cvPDF from '../assets/TomaszFurgalaCV.pdf';
 
 const About = () => {
   const openPDF = () => {
-    window.open('/TomaszFurgalaCV.pdf');
+    window.open(cvPDF, '_blank');
   };
 
   return (

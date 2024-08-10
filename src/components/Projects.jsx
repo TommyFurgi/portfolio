@@ -17,6 +17,10 @@ const Projects = () => {
     }
   }, []);
 
+  const getImagePath = (imageName) => {
+    return require(`../assets/images/projects/${imageName}`);
+  };
+
   return (
     <div name="portfolio" className="portfolio-container">
       <div className="portfolio-content">
@@ -56,7 +60,7 @@ const Projects = () => {
                 >
                   {project.images.map((image, index) => (
                     <SwiperSlide key={index}>
-                      <img src={image} alt={`Slide ${index + 1}`} />
+                      <img src={getImagePath(image)} alt={`Slide ${index + 1}`} />
                     </SwiperSlide>
                   ))}
                 </Swiper>

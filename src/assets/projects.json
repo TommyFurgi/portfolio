@@ -5,9 +5,9 @@
       "title": "Pollution Controller",
       "description": "Pollution Controller is a web application built with Elixir and the Phoenix framework, designed to monitor and manage pollution data from various stations. Leveraging Ecto, a powerful database wrapper in Elixir, Pollution Controller provides robust data storage and retrieval capabilities, ensuring seamless management of environmental metrics. It enables real-time visualization and analysis of pollution data, empowering users to track pollution levels across different locations with ease.",
       "images": [
-        "/images/projects/pollution-controller/screenshot1.png",
-        "/images/projects/pollution-controller/screenshot2.png",
-        "/images/projects/pollution-controller/screenshot3.png"
+        "pollution-controller/screenshot1.png",
+        "pollution-controller/screenshot2.png",
+        "pollution-controller/screenshot3.png"
       ],
       "codeLink": "https://github.com/TommyFurgi/Pollution-Controller"
     },
@@ -16,9 +16,9 @@
       "title": "Darwin World",
       "description": "This project is a simulation inspired by Darwin's Theory, where animals interact within a dynamic environment. Developed using Java and JavaFX, the simulation features animals that move across a map, consume grass for energy, and engage in reproduction to ensure survival. Each animal is driven by a unique genome that influences its movement patterns, with genetic traits inherited from its parents. The simulation models natural selection, where animals must balance energy consumption and reproduction to avoid extinction. The genome-driven behavior highlights how genetic variations contribute to the survival of species in this evolving ecosystem.",
       "images": [
-        "/images/projects/darwin-world/screenshot1.png",
-        "/images/projects/darwin-world/screenshot2.png",
-        "/images/projects/darwin-world/screenshot3.png"
+        "darwin-world/screenshot1.png",
+        "darwin-world/screenshot2.png",
+        "darwin-world/screenshot3.png"
       ],
       "codeLink": "https://github.com/TommyFurgi/oop-evolution-project"
     },
@@ -27,9 +27,9 @@
       "title": "Web Market",
       "description": "This project features an online store that supports a range of functionalities for managing products and offers. Built with React for a dynamic user experience, and leveraging Express for database interactions, the store allows users to browse products, log in with saved accounts, create new product listings, add items to the cart, delete offers, and edit their own listings. The platform ensures a seamless shopping experience with real-time updates and efficient product management. Its intuitive interface and robust backend make it a powerful tool for both users and administrators.",
       "images": [
-        "/images/projects/web-market/screenshot1.png",
-        "/images/projects/web-market/screenshot2.png",
-        "/images/projects/web-market/screenshot3.png"
+        "web-market/screenshot1.png",
+        "web-market/screenshot2.png",
+        "web-market/screenshot3.png"
       ],
       "codeLink": "https://github.com/TommyFurgi/web-market"
     },
@@ -38,9 +38,9 @@
       "title": "Tower Defense",
       "description": "Tower Defense is an engaging strategy game where players strategically place defensive towers along a path to fend off waves of incoming enemies. The goal is to prevent the enemies from reaching the end of the path by strategically deploying various types of towers that can attack, slow down, or poison the adversaries. Developed using the Pygame library in Python, this game challenges players to optimize their defenses and adapt their strategy as the difficulty escalates. With its diverse tower types and progressively tougher waves, Tower Defense offers a compelling and visually satisfying experience, making each decision crucial to achieving victory.",
       "images": [
-        "/images/projects/tower-defense/overview.png",
-        "/images/projects/tower-defense/screenshot1.png",
-        "/images/projects/tower-defense/screenshot2.png"
+        "tower-defense/overview.png",
+        "tower-defense/screenshot1.png",
+        "tower-defense/screenshot2.png"
       ],
       "codeLink": "https://github.com/TommyFurgi/Tower_defense_game"
     },
@@ -49,12 +49,12 @@
       "title": "Stock Management System",
       "description": "The Stock Management System is a powerful web application designed to streamline and optimize business operations through advanced management and analytical tools. Utilizing a cutting-edge tech stack, the system features a React-powered frontend for a responsive and user-friendly interface. On the backend, it employs C# alongside Entity Framework (EF) to ensure robust and scalable data handling. Data is efficiently stored and managed using a SQLite3 database, enabling quick access and seamless integration with other system components. This comprehensive solution is tailored to meet the complex needs of modern businesses, providing real-time insights and efficient stock management.",
       "images": [
-        "/images/projects/stock-management-system/screenshot-client-management.png",
-        "/images/projects/stock-management-system/screenshot-product-management.png",
-        "/images/projects/stock-management-system/screenshot-invoice-management.png",
-        "/images/projects/stock-management-system/screenshot-data-visualization.png"
+        "stock-management-system/screenshot-client-management.png",
+        "stock-management-system/screenshot-product-management.png",
+        "stock-management-system/screenshot-invoice-management.png",
+        "stock-management-system/screenshot-data-visualization.png"
       ],
-      "codeLink": "https://github.com/TommyFurgi"
+      "codeLink": "https://github.com/TommyFurgi/Stock-Management-System"
     }
   ]
 }
