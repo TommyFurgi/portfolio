@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c98201e2.css",
+    "main.css": "/portfolio/static/css/main.165da27f.css",
     "main.js": "/portfolio/static/js/main.044b0574.js",
     "static/media/profile-2.jpg": "/portfolio/static/media/profile-2.1bdbf08591c6c7e7e73f.jpg",
     "static/media/screenshot3.png": "/portfolio/static/media/screenshot3.8f3250feeeea18f5aaf1.png",
@@ -14,11 +14,11 @@
     "static/media/screenshot-client-management.png": "/portfolio/static/media/screenshot-client-management.884b83edd2da32828064.png",
     "static/media/TomaszFurgalaCV.pdf": "/portfolio/static/media/TomaszFurgalaCV.5890bd2efb8c8b90f1fe.pdf",
     "index.html": "/portfolio/index.html",
-    "main.c98201e2.css.map": "/portfolio/static/css/main.c98201e2.css.map",
+    "main.165da27f.css.map": "/portfolio/static/css/main.165da27f.css.map",
     "main.044b0574.js.map": "/portfolio/static/js/main.044b0574.js.map"
   },
   "entrypoints": [
-    "static/css/main.c98201e2.css",
+    "static/css/main.165da27f.css",
     "static/js/main.044b0574.js"
   ]
 }
