@@ -1,0 +1,218 @@
+.portfolio-container {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    width: 100%;
+    transform: translateY(-50px);
+}
+
+.portfolio-content {
+    display: flex;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.90); 
+    padding: 20px;
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 80%;
+    max-width: 1200px; 
+    text-align: center; 
+    margin: 0 10px; 
+    flex-direction: column;
+}
+
+.portfolio-navbar {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    position: relative;
+}
+
+.portfolio-nav-item {
+    flex: 1;
+    height: 80%;
+    background-color: #4b5563;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    font-size: 1rem;
+    border-right: 1px solid #1f2937;
+    position: relative;
+    margin-top: auto;
+}
+
+.portfolio-nav-item:hover {
+    background-color: #34d399;
+}
+
+.portfolio-nav-item.active {
+    background-color: #34d399;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    height: 100%;
+    border-right: none;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 4px -4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+.portfolio-nav-item.active::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 80%;
+    background-color: #000;
+}
+
+.portfolio-nav-item:last-child.active::after {
+    content: none;
+}
+
+.portfolio-nav-item:last-child {
+    border-right: none;
+}
+
+.project-description {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolio-project {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(243, 244, 246, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-project h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #111827;
+}
+
+.portfolio-project p {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 15px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.project-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.github-button {
+    background-color: rgb(5 150 105); 
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-right: 40px;
+}
+
+.github-button:hover {
+    background-color: rgb(84, 175, 139);
+}
+
+.swiper {
+    margin-top: 20px;
+    max-width: 800px;
+    width: 80%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.swiper-slide {
+    user-select: none;
+}
+
+.swiper-slide img {
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination {
+    color: #2bb482 !important;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet {
+    background-color: #111111 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #2bb482 !important;
+}
+
+.swiper:hover .swiper-button-next,
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-pagination {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .project-button {
+        justify-content: center;
+    }
+
+    .swiper {
+        width: 100%;
+    }
+    
+    .swiper-pagination {
+        opacity: 1;
+    }
+
+    .portfolio-navbar {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .portfolio-nav-item {
+        width: 100%;
+        margin: 5px 0;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .portfolio-nav-item.active {
+        box-shadow: none;
+        transform: none;
+        border-radius: 10px;
+    }
+
+    .portfolio-nav-item.active::after {
+        content: none;
+    }
+}

@@ -1,0 +1,89 @@
+.education-container {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    transform: translateY(-50px);
+}
+
+.education-content {
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.90); 
+    padding: 40px;
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 80%; 
+    max-width: 1200px; 
+    text-align: center; 
+    margin: 0 10px; 
+}
+
+#education .section-content {
+    text-align: left;
+}
+
+.education-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px 0; 
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid #6ee7b7;
+    display: inline;
+    margin-bottom: 1rem;
+    color: #10B981;
+}
+
+.education-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.degree-dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.education-details h3 {
+    font-size: 1.5rem;
+}
+
+.education-details h4 {
+    font-size: 1.2rem; 
+    margin-top: 5px; 
+    margin-bottom: 10px; 
+}
+
+.education-details h5 {
+    font-size: 1rem; 
+    margin: 10px 0 5px; 
+}
+
+.education-details p {
+    font-size: 0.9rem; 
+    line-height: 1.4; 
+    margin: 5px 0; 
+    
+}
+
+.degree-dates .date {
+    font-size: 1rem;
+    color: #333;
+    text-align: right; 
+}
+
+.education-details p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+    text-align: justify;
+    text-justify: inter-word;
+}
