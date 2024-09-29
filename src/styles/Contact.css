@@ -99,7 +99,7 @@
     font-size: 1rem;
     text-align: center; 
     text-decoration: none; 
-    border-radius: 5px; 
+    border-radius: 12px; 
     color: #fff;
     border: none; 
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -132,6 +132,14 @@
 
 .button-email:hover {
     background-color: #a43a2c; 
+}
+
+.button-leetcode {
+    background-color: #d38843;
+}
+
+.button-leetcode:hover {
+    background-color: #aa6e36;
 }
 
 .contact-list li {

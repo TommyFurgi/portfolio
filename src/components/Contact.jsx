@@ -28,7 +28,7 @@ const Contact = () => {
                 </li>
                 <li>
                     <GreenArrow className="icon" />
-                    <p> Witolda Budryka 2/404A,</p>
+                    <p> Witolda Budryka 2/411A,</p>
                 </li>
                 <li>
                     <p style={{ marginLeft: "2.2rem" }}>30-072 Kraków</p>
@@ -61,6 +61,16 @@ const Contact = () => {
                         className="button button-email"
                     >
                         Email
+                    </a>
+                </li>
+                <li>
+                <a
+                        href="https://leetcode.com/u/TommyFurgi/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button button-leetcode"
+                    >
+                        Leetcode
                     </a>
                 </li>
             </ul>
