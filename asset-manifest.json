@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.5106fe64.css",
-    "main.js": "/portfolio/static/js/main.735d937b.js",
+    "main.js": "/portfolio/static/js/main.b3aa1c65.js",
     "static/media/profile-2.jpg": "/portfolio/static/media/profile-2.1bdbf08591c6c7e7e73f.jpg",
     "static/media/screenshot3.png": "/portfolio/static/media/screenshot3.8f3250feeeea18f5aaf1.png",
     "static/media/profile-1.jpg": "/portfolio/static/media/profile-1.0cef1fb80ee2439dc638.jpg",
@@ -12,13 +12,13 @@
     "static/media/screenshot-product-management.png": "/portfolio/static/media/screenshot-product-management.3dc5ca1aa5131c745270.png",
     "static/media/screenshot-invoice-management.png": "/portfolio/static/media/screenshot-invoice-management.74c1b0dd21ea667212db.png",
     "static/media/screenshot-client-management.png": "/portfolio/static/media/screenshot-client-management.884b83edd2da32828064.png",
-    "static/media/TomaszFurgalaCV.pdf": "/portfolio/static/media/TomaszFurgalaCV.5890bd2efb8c8b90f1fe.pdf",
+    "static/media/TomaszFurgala.pdf": "/portfolio/static/media/TomaszFurgala.995c396e42893317cc3f.pdf",
     "index.html": "/portfolio/index.html",
     "main.5106fe64.css.map": "/portfolio/static/css/main.5106fe64.css.map",
-    "main.735d937b.js.map": "/portfolio/static/js/main.735d937b.js.map"
+    "main.b3aa1c65.js.map": "/portfolio/static/js/main.b3aa1c65.js.map"
   },
   "entrypoints": [
     "static/css/main.5106fe64.css",
-    "static/js/main.735d937b.js"
+    "static/js/main.b3aa1c65.js"
   ]
 }
