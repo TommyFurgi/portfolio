@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5106fe64.css",
-    "main.js": "/portfolio/static/js/main.b3aa1c65.js",
-    "static/media/profile-2.jpg": "/portfolio/static/media/profile-2.1bdbf08591c6c7e7e73f.jpg",
+    "main.css": "/portfolio/static/css/main.e9021064.css",
+    "main.js": "/portfolio/static/js/main.f97e9c05.js",
     "static/media/screenshot3.png": "/portfolio/static/media/screenshot3.8f3250feeeea18f5aaf1.png",
     "static/media/profile-1.jpg": "/portfolio/static/media/profile-1.0cef1fb80ee2439dc638.jpg",
     "static/media/screenshot2.png": "/portfolio/static/media/screenshot2.c4996122099e7fe8786a.png",
     "static/media/screenshot1.png": "/portfolio/static/media/screenshot1.72bd2bb81c5245a85e55.png",
     "static/media/overview.png": "/portfolio/static/media/overview.788def05f46d76cd2630.png",
     "static/media/screenshot-data-visualization.png": "/portfolio/static/media/screenshot-data-visualization.9722d1539d73b49c8d3b.png",
+    "static/media/TomaszFurgala.pdf": "/portfolio/static/media/TomaszFurgala.9ac585447695c798a56a.pdf",
     "static/media/screenshot-product-management.png": "/portfolio/static/media/screenshot-product-management.3dc5ca1aa5131c745270.png",
     "static/media/screenshot-invoice-management.png": "/portfolio/static/media/screenshot-invoice-management.74c1b0dd21ea667212db.png",
     "static/media/screenshot-client-management.png": "/portfolio/static/media/screenshot-client-management.884b83edd2da32828064.png",
-    "static/media/TomaszFurgala.pdf": "/portfolio/static/media/TomaszFurgala.995c396e42893317cc3f.pdf",
     "index.html": "/portfolio/index.html",
-    "main.5106fe64.css.map": "/portfolio/static/css/main.5106fe64.css.map",
-    "main.b3aa1c65.js.map": "/portfolio/static/js/main.b3aa1c65.js.map"
+    "main.e9021064.css.map": "/portfolio/static/css/main.e9021064.css.map",
+    "main.f97e9c05.js.map": "/portfolio/static/js/main.f97e9c05.js.map"
   },
   "entrypoints": [
-    "static/css/main.5106fe64.css",
-    "static/js/main.b3aa1c65.js"
+    "static/css/main.e9021064.css",
+    "static/js/main.f97e9c05.js"
   ]
 }
