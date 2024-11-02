@@ -24,10 +24,6 @@ const Contact = () => {
                 </li>
                 <li>
                     <GreenArrow className="icon" />
-                    <p>+48 786 220 944</p>
-                </li>
-                <li>
-                    <GreenArrow className="icon" />
                     <p> Witolda Budryka 2/411A,</p>
                 </li>
                 <li>

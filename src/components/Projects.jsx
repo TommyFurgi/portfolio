@@ -6,10 +6,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import projectsData from '../assets/projects.json'; 
+
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
-
+  
   useEffect(() => {
     setProjects(projectsData.projects);
     if (projectsData.projects.length > 0) {

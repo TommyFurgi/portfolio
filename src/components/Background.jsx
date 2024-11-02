@@ -21,7 +21,8 @@ const Background = () => {
             scale: 1.00,
             scaleMobile: 1.00,
             points: 15.00,
-            color: 0x4de8d5,
+            color: 0x059669,
+            backgroundColor: 0x202025,
             maxDistance: 20.00,
             spacing: 13.00
           });
