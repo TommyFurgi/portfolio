@@ -31,10 +31,10 @@
 .contact-title {
     font-size: 3rem;
     font-weight: bold;
-    border-bottom: 2px solid #6ee7b7;
+    border-bottom: 2px solid #289c76;
     display: inline;
     margin-bottom: 1rem;
-    color: #10B981;
+    color: #0ea06f;
 }
 
 .header svg {
@@ -95,6 +95,7 @@
 
 .button {
     display: inline-block; 
+    width: 100%;
     padding: 10px 20px;
     font-size: 1rem;
     text-align: center; 
@@ -104,6 +105,8 @@
     border: none; 
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-sizing: border-box; 
+    line-height: 40px; 
+    text-align: center;
 }
 
 .button:hover {
@@ -144,10 +147,6 @@
 
 .contact-list li {
     display: flex; 
-}
-
-.button {
-    width: 100%; 
 }
 
 @media (max-width: 768px) {
@@ -205,7 +204,6 @@
     .contact-list a {
         font-size: 1rem;
         margin-left: 0; 
-        text-align: left;
     }
 
     .button {

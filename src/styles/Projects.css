@@ -47,11 +47,11 @@
 }
 
 .portfolio-nav-item:hover {
-    background-color: #34d399;
+    background-color: #35a580;
 }
 
 .portfolio-nav-item.active {
-    background-color: #34d399;
+    background-color: #0ea06f;
     box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2);
     z-index: 1;
     height: 100%;
@@ -120,19 +120,20 @@
 }
 
 .github-button {
-    background-color: rgb(5 150 105); 
+    background-color: #059669; 
     color: #ffffff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     margin-right: 40px;
 }
 
 .github-button:hover {
-    background-color: rgb(84, 175, 139);
+    transform: scale(1.05);
+    background-color: #3f9673;
 }
 
 .swiper {
@@ -161,7 +162,7 @@
 .swiper-button-next,
 .swiper-button-prev,
 .swiper-pagination {
-    color: #2bb482 !important;
+    color: #059669 !important;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
