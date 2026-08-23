@@ -1,7 +1,7 @@
 export default function Github() {
   return (
     <>
-      <svg width="24" height="24" viewBox="0 0 128 128">
+      <svg width="100%" height="100%" viewBox="0 0 128 128">
         <g fill="#181616">
           <path 
             fillRule="evenodd" 

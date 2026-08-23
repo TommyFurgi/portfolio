@@ -24,17 +24,6 @@
     },
     {
       "id": 3,
-      "title": "Web Market",
-      "description": "This project features an online store that supports a range of functionalities for managing products and offers. Built with React for a dynamic user experience, and leveraging Express for database interactions, the store allows users to browse products, log in with saved accounts, create new product listings, add items to the cart, delete offers, and edit their own listings. The platform ensures a seamless shopping experience with real-time updates and efficient product management. Its intuitive interface and robust backend make it a powerful tool for both users and administrators.",
-      "images": [
-        "web-market/screenshot1.png",
-        "web-market/screenshot2.png",
-        "web-market/screenshot3.png"
-      ],
-      "codeLink": "https://github.com/TommyFurgi/web-market"
-    },
-    {
-      "id": 4,
       "title": "Tower Defense",
       "description": "Tower Defense is an engaging strategy game where players strategically place defensive towers along a path to fend off waves of incoming enemies. The goal is to prevent the enemies from reaching the end of the path by strategically deploying various types of towers that can attack, slow down, or poison the adversaries. Developed using the Pygame library in Python, this game challenges players to optimize their defenses and adapt their strategy as the difficulty escalates. With its diverse tower types and progressively tougher waves, Tower Defense offers a compelling and visually satisfying experience, making each decision crucial to achieving victory.",
       "images": [
@@ -45,7 +34,7 @@
       "codeLink": "https://github.com/TommyFurgi/Tower_defense_game"
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "Stock Management System",
       "description": "The Stock Management System is a powerful web application designed to streamline and optimize business operations through advanced management and analytical tools. Utilizing a cutting-edge tech stack, the system features a React-powered frontend for a responsive and user-friendly interface. On the backend, it employs C# alongside Entity Framework (EF) to ensure robust and scalable data handling. Data is efficiently stored and managed using a SQLite3 database, enabling quick access and seamless integration with other system components. This comprehensive solution is tailored to meet the complex needs of modern businesses, providing real-time insights and efficient stock management.",
       "images": [
