@@ -41,7 +41,7 @@ export const SIZE_SKILLS = '1.0625rem';
 export const SIZE_SUBHEADING = '1.3rem';
 
 export const NAVBAR_HEIGHT = '72px';
-export const NAVBAR_SCROLL_OFFSET = -88;
+export const NAVBAR_SCROLL_OFFSET = -72;
 export const BORDER_RADIUS = '8px';
 export const BORDER_RADIUS_LG = '16px';
 export const SECTION_MAX_WIDTH = '1200px';
@@ -55,9 +55,7 @@ export const SHADOW_IMAGE = '0 12px 40px rgba(14, 160, 111, 0.15)';
 
 export const TRANSITION_DEFAULT = '0.3s ease';
 
-export const BREAKPOINT_NAV_MOBILE = 880;
-export const BREAKPOINT_PROJECTS_MOBILE = 850;
-export const BREAKPOINT_HOME_MOBILE = 768;
+export const BREAKPOINT_MOBILE = 768;
 
 export const QUALTRICS_URL = 'https://www.linkedin.com/company/qualtrics/';
 
@@ -71,4 +69,5 @@ export const SOCIAL_COLORS = {
 export const SECTION_TONE = {
   WHITE: 'white',
   MUTED: 'muted',
+  SURFACE: 'surface',
 };

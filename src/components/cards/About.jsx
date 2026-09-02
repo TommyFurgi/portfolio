@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {
   BORDER_RADIUS,
   BORDER_RADIUS_LG,
-  BREAKPOINT_HOME_MOBILE,
+  BREAKPOINT_MOBILE,
   COLOR_BORDER,
   COLOR_PRIMARY,
   COLOR_PRIMARY_DARK,
@@ -12,7 +12,6 @@ import {
   COLOR_TEXT_SECONDARY,
   COLOR_WHITE,
   FONT_BODY,
-  NAVBAR_HEIGHT,
   QUALTRICS_URL,
   SHADOW_MD,
   SIZE_BODY,
@@ -22,7 +21,6 @@ import {
 import { sectionHeaderStyle, sectionTitleStyle } from '../config/sharedStyles';
 
 const sectionStyle = {
-  minHeight: `calc(100vh - ${NAVBAR_HEIGHT})`,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -160,7 +158,7 @@ const ROLES = [
 
 const RESPONSIBILITIES = [
   'Take product work end-to-end: Kotlin/Spring Boot services on the backend, React on the frontend',
-  'Extend what is already in production — new endpoints, UI flows, and database updates where the feature needs them',
+  'Extend what is already in production: new endpoints, UI flows, and database updates where the feature needs them',
   'Work day-to-day with the team: reviews, fixing follow-ups, and shipping through Jenkins and Spinnaker',
 ];
 
@@ -172,10 +170,10 @@ const TECH_GROUPS = [
 ];
 
 const About = () => {
-  const [isWide, setIsWide] = useState(window.innerWidth >= BREAKPOINT_HOME_MOBILE);
+  const [isWide, setIsWide] = useState(window.innerWidth >= BREAKPOINT_MOBILE);
 
   useEffect(() => {
-    const handleResize = () => setIsWide(window.innerWidth >= BREAKPOINT_HOME_MOBILE);
+    const handleResize = () => setIsWide(window.innerWidth >= BREAKPOINT_MOBILE);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -194,7 +192,7 @@ const About = () => {
     : { ...techGridStyle, gridTemplateColumns: '1fr' };
 
   return (
-    <div id="about me" style={sectionStyle}>
+    <div style={sectionStyle}>
       <div style={sectionHeaderStyle}>
         <h2 style={sectionTitleStyle}>About me</h2>
       </div>

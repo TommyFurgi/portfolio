@@ -11,16 +11,16 @@ const MainContent = () => {
   return (
     <>
       <Home />
-      <SectionWrapper tone={SECTION_TONE.MUTED}>
+      <SectionWrapper id="about me" tone={SECTION_TONE.MUTED}>
         <About />
       </SectionWrapper>
-      <SectionWrapper tone={SECTION_TONE.WHITE}>
+      <SectionWrapper id="education" tone={SECTION_TONE.MUTED}>
         <Education />
       </SectionWrapper>
-      <SectionWrapper tone={SECTION_TONE.MUTED}>
+      <SectionWrapper id="projects" tone={SECTION_TONE.MUTED}>
         <Projects />
       </SectionWrapper>
-      <SectionWrapper tone={SECTION_TONE.WHITE}>
+      <SectionWrapper id="contact" tone={SECTION_TONE.MUTED}>
         <Contact />
       </SectionWrapper>
     </>

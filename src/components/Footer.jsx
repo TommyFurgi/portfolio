@@ -15,7 +15,7 @@ const footerStyle = {
   color: COLOR_TEXT_SECONDARY,
   fontSize: SIZE_BODY,
   fontFamily: FONT_BODY,
-  padding: '20px',
+  padding: '12px',
   borderTop: `1px solid ${COLOR_BORDER}`,
 };
 

@@ -3,7 +3,10 @@
     {
       "id": 1,
       "title": "Pollution Controller",
-      "description": "Pollution Controller is a web application built with Elixir and the Phoenix framework, designed to monitor and manage pollution data from various stations. Leveraging Ecto, a powerful database wrapper in Elixir, Pollution Controller provides robust data storage and retrieval capabilities, ensuring seamless management of environmental metrics. It enables real-time visualization and analysis of pollution data, empowering users to track pollution levels across different locations with ease.",
+      "summary": "Web app for monitoring and managing pollution data from stations with real-time visualization.",
+      "description": "Pollution Controller is a web application built with Elixir and the Phoenix framework, designed to monitor and manage pollution data from various stations. Leveraging Ecto for data storage and retrieval, it enables real-time visualization and analysis of pollution levels across different locations.",
+      "tech": ["Elixir", "Phoenix", "Ecto"],
+      "heroImage": "pollution-controller/screenshot1.png",
       "images": [
         "pollution-controller/screenshot1.png",
         "pollution-controller/screenshot2.png",
@@ -14,7 +17,10 @@
     {
       "id": 2,
       "title": "Darwin World",
-      "description": "This project is a simulation inspired by Darwin's Theory, where animals interact within a dynamic environment. Developed using Java and JavaFX, the simulation features animals that move across a map, consume grass for energy, and engage in reproduction to ensure survival. Each animal is driven by a unique genome that influences its movement patterns, with genetic traits inherited from its parents. The simulation models natural selection, where animals must balance energy consumption and reproduction to avoid extinction. The genome-driven behavior highlights how genetic variations contribute to the survival of species in this evolving ecosystem.",
+      "summary": "Ecosystem simulation where animals evolve, reproduce, and compete based on inherited genomes.",
+      "description": "A simulation inspired by Darwin's theory of evolution. Animals move across a map, consume grass for energy, and reproduce with traits inherited from their parents. Genome-driven behavior models natural selection as species balance survival and reproduction in a dynamic environment.",
+      "tech": ["Java", "JavaFX"],
+      "heroImage": "darwin-world/screenshot1.png",
       "images": [
         "darwin-world/screenshot1.png",
         "darwin-world/screenshot2.png",
@@ -25,7 +31,10 @@
     {
       "id": 3,
       "title": "Tower Defense",
-      "description": "Tower Defense is an engaging strategy game where players strategically place defensive towers along a path to fend off waves of incoming enemies. The goal is to prevent the enemies from reaching the end of the path by strategically deploying various types of towers that can attack, slow down, or poison the adversaries. Developed using the Pygame library in Python, this game challenges players to optimize their defenses and adapt their strategy as the difficulty escalates. With its diverse tower types and progressively tougher waves, Tower Defense offers a compelling and visually satisfying experience, making each decision crucial to achieving victory.",
+      "summary": "Strategy game where players place towers to stop waves of enemies along a path.",
+      "description": "Tower Defense challenges players to deploy different tower types that attack, slow down, or poison incoming enemies before they reach the end of the path. Built with Pygame, the game escalates in difficulty and rewards adaptive defensive strategies.",
+      "tech": ["Python", "Pygame"],
+      "heroImage": "tower-defense/overview.png",
       "images": [
         "tower-defense/overview.png",
         "tower-defense/screenshot1.png",
@@ -36,7 +45,10 @@
     {
       "id": 4,
       "title": "Stock Management System",
-      "description": "The Stock Management System is a powerful web application designed to streamline and optimize business operations through advanced management and analytical tools. Utilizing a cutting-edge tech stack, the system features a React-powered frontend for a responsive and user-friendly interface. On the backend, it employs C# alongside Entity Framework (EF) to ensure robust and scalable data handling. Data is efficiently stored and managed using a SQLite3 database, enabling quick access and seamless integration with other system components. This comprehensive solution is tailored to meet the complex needs of modern businesses, providing real-time insights and efficient stock management.",
+      "summary": "Business web app for managing clients, products, invoices, and stock analytics.",
+      "description": "A full-stack stock management system with a React frontend and a C# backend using Entity Framework. SQLite powers data storage, while dedicated modules handle clients, products, invoices, and data visualization for day-to-day business operations.",
+      "tech": ["React", "C#", "Entity Framework", "SQLite"],
+      "heroImage": "stock-management-system/screenshot-client-management.png",
       "images": [
         "stock-management-system/screenshot-client-management.png",
         "stock-management-system/screenshot-product-management.png",

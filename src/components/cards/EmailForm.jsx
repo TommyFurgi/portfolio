@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { CheckIcon, CopyIcon } from '../../assets/icons/CopyIcon';
 import {
   BORDER_RADIUS,
   COLOR_BORDER,
@@ -8,150 +7,153 @@ import {
   COLOR_PRIMARY,
   COLOR_PRIMARY_DARK,
   COLOR_TEXT_DARK,
+  FONT_BODY,
   SIZE_BODY,
+  TRANSITION_DEFAULT,
 } from '../config/Constants';
+import {
+  EMAILJS_PUBLIC_KEY,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  isEmailJsConfigured,
+} from '../config/emailjs';
 
-const formSectionStyle = {
-  flex: '1 1 500px',
+const formStyle = {
   display: 'flex',
   flexDirection: 'column',
-  gap: '15px',
+  gap: '14px',
+  fontFamily: FONT_BODY,
 };
 
 const inputStyle = {
   width: '100%',
   boxSizing: 'border-box',
-  padding: '12px',
+  padding: '12px 14px',
   borderRadius: BORDER_RADIUS,
   border: `1px solid ${COLOR_BORDER}`,
   backgroundColor: COLOR_INPUT_BG,
   color: COLOR_TEXT_DARK,
   fontSize: SIZE_BODY,
   outline: 'none',
-};
-
-const emailDisplayStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  cursor: 'pointer',
-  position: 'relative',
-};
-
-const emailTextStyle = {
-  color: COLOR_PRIMARY,
-};
-
-const iconContainerStyle = {
-  display: 'flex',
-  alignItems: 'center',
-};
-
-const formInnerStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '15px',
+  fontFamily: FONT_BODY,
 };
 
 const textareaStyle = {
-  minHeight: '150px',
+  minHeight: '140px',
   resize: 'vertical',
 };
 
 const submitButtonStyle = {
   width: '100%',
   color: '#ffffff',
-  padding: '12px 25px',
+  padding: '12px 24px',
   border: 'none',
   borderRadius: BORDER_RADIUS,
   cursor: 'pointer',
   fontSize: SIZE_BODY,
-  fontWeight: 'bold',
-  transition: 'all 0.3s ease',
+  fontWeight: 600,
+  fontFamily: FONT_BODY,
+  transition: `background-color ${TRANSITION_DEFAULT}`,
 };
 
 const statusStyle = {
-  marginTop: '10px',
+  margin: 0,
+  fontSize: SIZE_BODY,
   color: COLOR_PRIMARY,
-  fontWeight: '500',
+  fontWeight: 500,
 };
 
 const EmailForm = () => {
   const form = useRef();
   const [status, setStatus] = useState('');
-  const [copied, setCopied] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const myEmail = 'tomaszfurgala23@gmail.com';
+  const [isSending, setIsSending] = useState(false);
+  const [replyTo, setReplyTo] = useState('');
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(myEmail);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+  useEffect(() => {
+    if (isEmailJsConfigured()) {
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+  }, []);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+
+    if (!isEmailJsConfigured()) {
+      setStatus('Email service is not configured.');
+      return;
+    }
+
+    const timeField = form.current?.elements.time;
+    if (timeField) {
+      timeField.value = new Date().toLocaleString('en-GB', {
+        dateStyle: 'medium',
+        timeStyle: 'short',
+      });
+    }
+
+    setIsSending(true);
     setStatus('Sending...');
 
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      form.current,
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-    )
-      .then(() => {
-        setStatus('Message sent successfully!');
-        form.current.reset();
-      }, (error) => {
-        setStatus('Failed to send. Try again later.');
-        console.log(error.text);
-      });
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form.current
+      );
+      setStatus('Message sent. Thank you for contacting me!');
+      form.current.reset();
+      setReplyTo('');
+    } catch (error) {
+      setStatus('Failed to send. Please try again or email me directly.');
+      console.error('EmailJS error:', error);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
-    <div style={formSectionStyle}>
-      <div
-        style={{ ...inputStyle, ...emailDisplayStyle }}
-        onClick={handleCopy}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => e.key === 'Enter' && handleCopy()}
-        title="Copy email"
+    <form ref={form} onSubmit={sendEmail} style={formStyle}>
+      <input
+        type="text"
+        name="name"
+        placeholder="Your name"
+        style={inputStyle}
+        required
+      />
+      <input
+        type="email"
+        name="user_email"
+        placeholder="Your email"
+        style={inputStyle}
+        value={replyTo}
+        onChange={(e) => setReplyTo(e.target.value)}
+        required
+      />
+      <input type="hidden" name="reply_to" value={replyTo} />
+      <input type="hidden" name="time" defaultValue="" />
+      <textarea
+        name="message"
+        placeholder="Your message"
+        style={{ ...inputStyle, ...textareaStyle }}
+        required
+      />
+      <button
+        type="submit"
+        disabled={isSending}
+        style={{
+          ...submitButtonStyle,
+          backgroundColor: isHovered && !isSending ? COLOR_PRIMARY_DARK : COLOR_PRIMARY,
+          opacity: isSending ? 0.7 : 1,
+          cursor: isSending ? 'not-allowed' : 'pointer',
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        <span style={emailTextStyle}>{myEmail}</span>
-        <div style={iconContainerStyle}>
-          {copied ? <CheckIcon /> : <CopyIcon />}
-        </div>
-      </div>
-
-      <form ref={form} onSubmit={sendEmail} style={formInnerStyle}>
-        <input
-          type="email"
-          name="user_email"
-          placeholder="Enter your email..."
-          style={inputStyle}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Describe your idea or ask a question..."
-          style={{ ...inputStyle, ...textareaStyle }}
-          required
-        />
-        <button
-          type="submit"
-          style={{
-            ...submitButtonStyle,
-            backgroundColor: isHovered ? COLOR_PRIMARY_DARK : COLOR_PRIMARY,
-          }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          Get in Touch
-        </button>
-        {status && <p style={statusStyle}>{status}</p>}
-      </form>
-    </div>
+        {isSending ? 'Sending...' : 'Send message'}
+      </button>
+      {status && <p style={statusStyle}>{status}</p>}
+    </form>
   );
 };
 

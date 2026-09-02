@@ -1,16 +1,27 @@
 import React from 'react';
 import {
   COLOR_SECTION_MUTED,
+  COLOR_SURFACE,
   COLOR_WHITE,
+  NAVBAR_HEIGHT,
   SECTION_MAX_WIDTH,
   SECTION_TONE,
 } from './config/Constants';
 
-const getWrapperStyle = (tone, compact) => ({
-  padding: compact ? '64px 28px 72px' : '88px 28px',
+const getBackgroundColor = (tone) => {
+  if (tone === SECTION_TONE.MUTED) return COLOR_SECTION_MUTED;
+  if (tone === SECTION_TONE.SURFACE) return COLOR_SURFACE;
+  return COLOR_WHITE;
+};
+
+const getWrapperStyle = (tone) => ({
+  minHeight: `calc(100vh - ${NAVBAR_HEIGHT})`,
+  boxSizing: 'border-box',
+  padding: '48px 28px',
   display: 'flex',
+  alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: tone === SECTION_TONE.MUTED ? COLOR_SECTION_MUTED : COLOR_WHITE,
+  backgroundColor: getBackgroundColor(tone),
 });
 
 const contentStyle = {
@@ -18,9 +29,9 @@ const contentStyle = {
   maxWidth: SECTION_MAX_WIDTH,
 };
 
-const SectionWrapper = ({ children, tone = SECTION_TONE.WHITE, compact = false }) => {
+const SectionWrapper = ({ children, tone = SECTION_TONE.WHITE, id }) => {
   return (
-    <div style={getWrapperStyle(tone, compact)}>
+    <div id={id} style={getWrapperStyle(tone)}>
       <div style={contentStyle}>
         {children}
       </div>

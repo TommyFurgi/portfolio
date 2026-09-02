@@ -1,53 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import React, { useEffect, useState } from 'react';
 import projectsData from '../../assets/projects.json';
-import ProjectNavbar from './ProjectNavbar';
+import ProjectCard from './ProjectCard';
 import ProjectDetails from './ProjectDetails';
-import {
-  BORDER_RADIUS_LG,
-  COLOR_BORDER,
-  COLOR_WHITE,
-  SHADOW_MD,
-} from '../config/Constants';
+import { BREAKPOINT_MOBILE } from '../config/Constants';
+import { sectionHeaderStyle, sectionTitleStyle } from '../config/sharedStyles';
 
-const containerStyle = {
-  width: '100%',
+const sectionStyle = {
+  textAlign: 'left',
 };
 
-const panelStyle = {
-  backgroundColor: COLOR_WHITE,
-  borderRadius: BORDER_RADIUS_LG,
-  border: `1px solid ${COLOR_BORDER}`,
-  boxShadow: SHADOW_MD,
-  overflow: 'hidden',
+const gridStyle = {
+  display: 'grid',
+  gap: '20px',
+  marginTop: '20px',
 };
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [isWide, setIsWide] = useState(window.innerWidth >= BREAKPOINT_MOBILE);
 
   useEffect(() => {
     setProjects(projectsData.projects);
-    if (projectsData.projects.length > 0) {
-      setSelectedProject(projectsData.projects[0]);
-    }
   }, []);
 
-  return (
-    <div id="projects" style={containerStyle}>
-      <div style={panelStyle}>
-        <ProjectNavbar
-          projects={projects}
-          selectedProject={selectedProject}
-          setSelectedProject={setSelectedProject}
-        />
+  useEffect(() => {
+    const handleResize = () => setIsWide(window.innerWidth >= BREAKPOINT_MOBILE);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-        {selectedProject && (
-          <ProjectDetails project={selectedProject} />
-        )}
+  const gridLayoutStyle = {
+    ...gridStyle,
+    gridTemplateColumns: isWide ? '1fr 1fr' : '1fr',
+  };
+
+  return (
+    <div style={sectionStyle}>
+      <div style={sectionHeaderStyle}>
+        <h2 style={sectionTitleStyle}>Projects</h2>
       </div>
+
+      {selectedProject ? (
+        <ProjectDetails
+          project={selectedProject}
+          onBack={() => setSelectedProject(null)}
+        />
+      ) : (
+        <div style={gridLayoutStyle}>
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onSelect={setSelectedProject}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

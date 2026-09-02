@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import OpenNav from '../assets/icons/OpenNav';
 import CloseNav from '../assets/icons/CloseNav';
 import {
-  BREAKPOINT_NAV_MOBILE,
+  BREAKPOINT_MOBILE,
   COLOR_BORDER,
   COLOR_NAVBAR,
   COLOR_PRIMARY,
@@ -56,7 +56,7 @@ const menuToggleStyle = {
 
 const links = [
   { id: 1, link: 'home', label: 'Home' },
-  { id: 2, link: 'about me', label: 'About' },
+  { id: 2, link: 'about me', label: 'About me' },
   { id: 3, link: 'education', label: 'Education' },
   { id: 4, link: 'projects', label: 'Projects' },
   { id: 5, link: 'contact', label: 'Contact' },
@@ -64,11 +64,11 @@ const links = [
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= BREAKPOINT_NAV_MOBILE);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= BREAKPOINT_MOBILE);
   const [hoveredId, setHoveredId] = useState(null);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= BREAKPOINT_NAV_MOBILE);
+    const handleResize = () => setIsMobile(window.innerWidth <= BREAKPOINT_MOBILE);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);

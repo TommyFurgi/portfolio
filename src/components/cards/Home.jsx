@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 import ExternalLink from '../../assets/icons/ExternalLink';
 import {
   BORDER_RADIUS_LG,
-  BREAKPOINT_HOME_MOBILE,
+  BREAKPOINT_MOBILE,
   COLOR_BORDER,
   COLOR_PRIMARY,
   COLOR_PRIMARY_DARK,
@@ -28,7 +28,8 @@ import {
 } from '../config/Constants';
 
 const sectionStyle = {
-  minHeight: `calc(100vh - ${NAVBAR_HEIGHT})`,
+  minHeight: '100vh',
+  boxSizing: 'border-box',
   paddingTop: NAVBAR_HEIGHT,
   background: GRADIENT_HERO,
   display: 'flex',
@@ -175,13 +176,13 @@ const getProfileImageStyle = (frameWidth, frameHeight) => {
 };
 
 const Home = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= BREAKPOINT_HOME_MOBILE);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= BREAKPOINT_MOBILE);
   const [primaryHovered, setPrimaryHovered] = useState(false);
   const [secondaryHovered, setSecondaryHovered] = useState(false);
   const [companyHovered, setCompanyHovered] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= BREAKPOINT_HOME_MOBILE);
+    const handleResize = () => setIsMobile(window.innerWidth <= BREAKPOINT_MOBILE);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
