@@ -2,41 +2,39 @@
   "projects": [
     {
       "id": 1,
-      "title": "Pollution Controller",
-      "description": "Pollution Controller is a web application built with Elixir and the Phoenix framework, designed to monitor and manage pollution data from various stations. Leveraging Ecto, a powerful database wrapper in Elixir, Pollution Controller provides robust data storage and retrieval capabilities, ensuring seamless management of environmental metrics. It enables real-time visualization and analysis of pollution data, empowering users to track pollution levels across different locations with ease.",
+      "title": "Social Network Visualizer",
+      "summary": "Bachelor's thesis at AGH - explore Twitter/X conversations as an interactive graph of authors, tweets, and hashtags.",
+      "description": "My bachelor's thesis at AGH University of Science and Technology: a full-stack workspace that turns Twitter/X export files into a live graph of authors, tweets, and hashtags - built for research-style analysis of online discourse, not a static chart. You ingest a project into Neo4j, then pan, search, and filter the network, expand from selected nodes along mention and reply links (and related hashtags or communities), save focused workspaces, and run graph algorithms on the live data: shortest paths (Dijkstra), bridge detection, community detection, and PageRank. An analytics dashboard surfaces project stats, activity over time, viral tweets, and leading authors, with dedicated drill-downs for users, posts, and hashtags. In a team of three I owned JSON ingest and Neo4j integrity constraints, workspace logic and graph UI, analytics views, MongoDB setup, Dijkstra and bridge detection via Neo4j GDS, backend tests, and team coordination.",
+      "tech": ["Next.js", "Java", "Spring Boot", "Neo4j", "MongoDB"],
+      "heroImage": "social-network-visualizer/graph-explorer.png",
       "images": [
-        "pollution-controller/screenshot1.png",
-        "pollution-controller/screenshot2.png",
-        "pollution-controller/screenshot3.png"
+        "social-network-visualizer/graph-explorer.png",
+        "social-network-visualizer/dashboard.png",
+        "social-network-visualizer/graph_info.png",
+        "social-network-visualizer/graph_menu.png",
+        "social-network-visualizer/community_graph.png"
       ],
-      "codeLink": "https://github.com/TommyFurgi/Pollution-Controller"
+      "codeLink": "https://github.com/TommyFurgi/social-network-visualizer"
     },
     {
       "id": 2,
-      "title": "Darwin World",
-      "description": "This project is a simulation inspired by Darwin's Theory, where animals interact within a dynamic environment. Developed using Java and JavaFX, the simulation features animals that move across a map, consume grass for energy, and engage in reproduction to ensure survival. Each animal is driven by a unique genome that influences its movement patterns, with genetic traits inherited from its parents. The simulation models natural selection, where animals must balance energy consumption and reproduction to avoid extinction. The genome-driven behavior highlights how genetic variations contribute to the survival of species in this evolving ecosystem.",
+      "title": "Coevolution & Sexual Selection",
+      "summary": "Agent-based model of how male traits and female preferences coevolve in a resource-constrained 2D world.",
+      "description": "An agent-based simulation built with Mesa and a Solara dashboard, exploring evolutionary dynamics between male display traits and female mate choice under limited food and energy. Agents forage, spend energy on movement and reproduction, and females evaluate males on a multi-dimensional trait vector; offspring inherit traits from both parents with configurable mutation in a continuous 2D torus. The live interface lets you tune population size, mutation rate, movement and reproduction costs, food energy, and regrowth, and watch selection pressure shift across generations.",
+      "tech": ["Python", "Mesa", "Solara"],
+      "heroImage": "coevolution-sexual-selection/enviroment.png",
       "images": [
-        "darwin-world/screenshot1.png",
-        "darwin-world/screenshot2.png",
-        "darwin-world/screenshot3.png"
+        "coevolution-sexual-selection/enviroment.png"
       ],
-      "codeLink": "https://github.com/TommyFurgi/oop-evolution-project"
+      "codeLink": "https://github.com/TommyFurgi/Coevolution-Sexual-Selection"
     },
     {
       "id": 3,
-      "title": "Web Market",
-      "description": "This project features an online store that supports a range of functionalities for managing products and offers. Built with React for a dynamic user experience, and leveraging Express for database interactions, the store allows users to browse products, log in with saved accounts, create new product listings, add items to the cart, delete offers, and edit their own listings. The platform ensures a seamless shopping experience with real-time updates and efficient product management. Its intuitive interface and robust backend make it a powerful tool for both users and administrators.",
-      "images": [
-        "web-market/screenshot1.png",
-        "web-market/screenshot2.png",
-        "web-market/screenshot3.png"
-      ],
-      "codeLink": "https://github.com/TommyFurgi/web-market"
-    },
-    {
-      "id": 4,
       "title": "Tower Defense",
-      "description": "Tower Defense is an engaging strategy game where players strategically place defensive towers along a path to fend off waves of incoming enemies. The goal is to prevent the enemies from reaching the end of the path by strategically deploying various types of towers that can attack, slow down, or poison the adversaries. Developed using the Pygame library in Python, this game challenges players to optimize their defenses and adapt their strategy as the difficulty escalates. With its diverse tower types and progressively tougher waves, Tower Defense offers a compelling and visually satisfying experience, making each decision crucial to achieving victory.",
+      "summary": "Pygame strategy game from the AGH Python course: place towers, stop enemy waves, and upgrade your defense.",
+      "description": "A tower defense built with Pygame for the Python Programming course at AGH (2023/2024), in a team of two. Players place towers along a path to stop waves of enemies with different speed, health, and resistance; towers can attack, slow, or poison, and can be upgraded for damage, range, and fire rate. Gold from defeated enemies funds new towers and upgrades as levels get harder and new options unlock.",
+      "tech": ["Python", "Pygame"],
+      "heroImage": "tower-defense/overview.png",
       "images": [
         "tower-defense/overview.png",
         "tower-defense/screenshot1.png",
@@ -45,9 +43,12 @@
       "codeLink": "https://github.com/TommyFurgi/Tower_defense_game"
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "Stock Management System",
-      "description": "The Stock Management System is a powerful web application designed to streamline and optimize business operations through advanced management and analytical tools. Utilizing a cutting-edge tech stack, the system features a React-powered frontend for a responsive and user-friendly interface. On the backend, it employs C# alongside Entity Framework (EF) to ensure robust and scalable data handling. Data is efficiently stored and managed using a SQLite3 database, enabling quick access and seamless integration with other system components. This comprehensive solution is tailored to meet the complex needs of modern businesses, providing real-time insights and efficient stock management.",
+      "summary": "Full-stack business app for clients, products, invoices, and stock analytics on React and C#.",
+      "description": "A full-stack stock management system with a React frontend and a C# / Entity Framework backend on SQLite. Dedicated modules cover clients, products, and invoices: adding and updating records, tracking stock, pricing, and billing history, with search, filter, and sort across the data. Integrated charts surface key metrics so day-to-day decisions are based on more than tables.",
+      "tech": ["React", "C#", "Entity Framework", "SQLite"],
+      "heroImage": "stock-management-system/screenshot-client-management.png",
       "images": [
         "stock-management-system/screenshot-client-management.png",
         "stock-management-system/screenshot-product-management.png",
