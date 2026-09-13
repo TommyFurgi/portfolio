@@ -2,37 +2,37 @@
   "projects": [
     {
       "id": 1,
-      "title": "Pollution Controller",
-      "summary": "Web app for monitoring and managing pollution data from stations with real-time visualization.",
-      "description": "Pollution Controller is a web application built with Elixir and the Phoenix framework, designed to monitor and manage pollution data from various stations. Leveraging Ecto for data storage and retrieval, it enables real-time visualization and analysis of pollution levels across different locations.",
-      "tech": ["Elixir", "Phoenix", "Ecto"],
-      "heroImage": "pollution-controller/screenshot1.png",
+      "title": "Social Network Visualizer",
+      "summary": "Bachelor's thesis at AGH - explore Twitter/X conversations as an interactive graph of authors, tweets, and hashtags.",
+      "description": "My bachelor's thesis at AGH University of Science and Technology: a full-stack workspace that turns Twitter/X export files into a live graph of authors, tweets, and hashtags - built for research-style analysis of online discourse, not a static chart. You ingest a project into Neo4j, then pan, search, and filter the network, expand from selected nodes along mention and reply links (and related hashtags or communities), save focused workspaces, and run graph algorithms on the live data: shortest paths (Dijkstra), bridge detection, community detection, and PageRank. An analytics dashboard surfaces project stats, activity over time, viral tweets, and leading authors, with dedicated drill-downs for users, posts, and hashtags. In a team of three I owned JSON ingest and Neo4j integrity constraints, workspace logic and graph UI, analytics views, MongoDB setup, Dijkstra and bridge detection via Neo4j GDS, backend tests, and team coordination.",
+      "tech": ["Next.js", "Java", "Spring Boot", "Neo4j", "MongoDB"],
+      "heroImage": "social-network-visualizer/graph-explorer.png",
       "images": [
-        "pollution-controller/screenshot1.png",
-        "pollution-controller/screenshot2.png",
-        "pollution-controller/screenshot3.png"
+        "social-network-visualizer/graph-explorer.png",
+        "social-network-visualizer/dashboard.png",
+        "social-network-visualizer/graph_info.png",
+        "social-network-visualizer/graph_menu.png",
+        "social-network-visualizer/community_graph.png"
       ],
-      "codeLink": "https://github.com/TommyFurgi/Pollution-Controller"
+      "codeLink": "https://github.com/TommyFurgi/social-network-visualizer"
     },
     {
       "id": 2,
-      "title": "Darwin World",
-      "summary": "Ecosystem simulation where animals evolve, reproduce, and compete based on inherited genomes.",
-      "description": "A simulation inspired by Darwin's theory of evolution. Animals move across a map, consume grass for energy, and reproduce with traits inherited from their parents. Genome-driven behavior models natural selection as species balance survival and reproduction in a dynamic environment.",
-      "tech": ["Java", "JavaFX"],
-      "heroImage": "darwin-world/screenshot1.png",
+      "title": "Coevolution & Sexual Selection",
+      "summary": "Agent-based model of how male traits and female preferences coevolve in a resource-constrained 2D world.",
+      "description": "An agent-based simulation built with Mesa and a Solara dashboard, exploring evolutionary dynamics between male display traits and female mate choice under limited food and energy. Agents forage, spend energy on movement and reproduction, and females evaluate males on a multi-dimensional trait vector; offspring inherit traits from both parents with configurable mutation in a continuous 2D torus. The live interface lets you tune population size, mutation rate, movement and reproduction costs, food energy, and regrowth, and watch selection pressure shift across generations.",
+      "tech": ["Python", "Mesa", "Solara"],
+      "heroImage": "coevolution-sexual-selection/enviroment.png",
       "images": [
-        "darwin-world/screenshot1.png",
-        "darwin-world/screenshot2.png",
-        "darwin-world/screenshot3.png"
+        "coevolution-sexual-selection/enviroment.png"
       ],
-      "codeLink": "https://github.com/TommyFurgi/oop-evolution-project"
+      "codeLink": "https://github.com/TommyFurgi/Coevolution-Sexual-Selection"
     },
     {
       "id": 3,
       "title": "Tower Defense",
-      "summary": "Strategy game where players place towers to stop waves of enemies along a path.",
-      "description": "Tower Defense challenges players to deploy different tower types that attack, slow down, or poison incoming enemies before they reach the end of the path. Built with Pygame, the game escalates in difficulty and rewards adaptive defensive strategies.",
+      "summary": "Pygame strategy game from the AGH Python course: place towers, stop enemy waves, and upgrade your defense.",
+      "description": "A tower defense built with Pygame for the Python Programming course at AGH (2023/2024), in a team of two. Players place towers along a path to stop waves of enemies with different speed, health, and resistance; towers can attack, slow, or poison, and can be upgraded for damage, range, and fire rate. Gold from defeated enemies funds new towers and upgrades as levels get harder and new options unlock.",
       "tech": ["Python", "Pygame"],
       "heroImage": "tower-defense/overview.png",
       "images": [
@@ -45,8 +45,8 @@
     {
       "id": 4,
       "title": "Stock Management System",
-      "summary": "Business web app for managing clients, products, invoices, and stock analytics.",
-      "description": "A full-stack stock management system with a React frontend and a C# backend using Entity Framework. SQLite powers data storage, while dedicated modules handle clients, products, invoices, and data visualization for day-to-day business operations.",
+      "summary": "Full-stack business app for clients, products, invoices, and stock analytics on React and C#.",
+      "description": "A full-stack stock management system with a React frontend and a C# / Entity Framework backend on SQLite. Dedicated modules cover clients, products, and invoices: adding and updating records, tracking stock, pricing, and billing history, with search, filter, and sort across the data. Integrated charts surface key metrics so day-to-day decisions are based on more than tables.",
       "tech": ["React", "C#", "Entity Framework", "SQLite"],
       "heroImage": "stock-management-system/screenshot-client-management.png",
       "images": [

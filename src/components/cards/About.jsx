@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ExternalLink from '../../assets/icons/ExternalLink';
 import {
   BORDER_RADIUS,
   BORDER_RADIUS_LG,
@@ -17,6 +18,7 @@ import {
   SIZE_BODY,
   SIZE_BODY_LG,
   SIZE_SUBHEADING,
+  TRANSITION_DEFAULT,
 } from '../config/Constants';
 import { sectionHeaderStyle, sectionTitleStyle } from '../config/sharedStyles';
 
@@ -58,17 +60,21 @@ const blockTitleStyle = {
 const companyHeaderStyle = {
   display: 'grid',
   gridTemplateColumns: '1fr auto',
-  alignItems: 'baseline',
+  alignItems: 'center',
   gap: '8px 16px',
   marginBottom: '16px',
 };
 
-const companyLinkStyle = {
+const getCompanyLinkStyle = (isHovered) => ({
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '6px',
   fontSize: SIZE_SUBHEADING,
   fontWeight: 700,
-  color: COLOR_PRIMARY,
+  color: isHovered ? COLOR_PRIMARY_DARK : COLOR_PRIMARY,
   textDecoration: 'none',
-};
+  transition: `color ${TRANSITION_DEFAULT}`,
+});
 
 const companyMetaStyle = {
   fontSize: SIZE_BODY,
@@ -151,15 +157,23 @@ const chipStyle = {
   lineHeight: 1.35,
 };
 
+const techNoteStyle = {
+  margin: '24px 0 0',
+  fontSize: SIZE_BODY,
+  color: COLOR_TEXT_SECONDARY,
+  lineHeight: 1.55,
+};
+
 const ROLES = [
-  { title: 'Software Engineer · Part-time', dates: 'Oct 2025 - Present' },
+  { title: 'Software Engineer · Part-time', dates: 'Oct 2025 - Oct 2026' },
   { title: 'Software Engineer Intern', dates: 'Jun 2025 - Sep 2025' },
 ];
 
 const RESPONSIBILITIES = [
-  'Take product work end-to-end: Kotlin/Spring Boot services on the backend, React on the frontend',
-  'Extend what is already in production: new endpoints, UI flows, and database updates where the feature needs them',
-  'Work day-to-day with the team: reviews, fixing follow-ups, and shipping through Jenkins and Spinnaker',
+  'Taking features from planning through to delivery, breaking work down, building across the stack, and coordinating with the team.',
+  'Designing and shipping product features in Kotlin, Spring Boot, and React, with attention to code quality.',
+  'Working with AWS and integrating external APIs, including Google My Business, Google Places, and internal business systems.',
+  'Helping the team day to day by unblocking issues, sharing knowledge, and keeping the workflow moving.',
 ];
 
 const TECH_GROUPS = [
@@ -171,6 +185,7 @@ const TECH_GROUPS = [
 
 const About = () => {
   const [isWide, setIsWide] = useState(window.innerWidth >= BREAKPOINT_MOBILE);
+  const [companyHovered, setCompanyHovered] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsWide(window.innerWidth >= BREAKPOINT_MOBILE);
@@ -199,7 +214,7 @@ const About = () => {
 
       <div style={introBlockStyle}>
         <p style={introParagraphStyle}>
-          I am a software engineer from Cracow, working at Qaltrics while finishing my
+          I am a software engineer from Cracow, finishing my
           Master&apos;s in Computer Science at AGH. I&apos;m drawn to web development - building
           interfaces and the systems behind them - and I&apos;m still discovering how much there
           is to learn in this field.
@@ -220,9 +235,13 @@ const About = () => {
               href={QUALTRICS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              style={companyLinkStyle}
+              style={getCompanyLinkStyle(companyHovered)}
+              onMouseEnter={() => setCompanyHovered(true)}
+              onMouseLeave={() => setCompanyHovered(false)}
+              aria-label="Qualtrics website"
             >
-              Qaltrics
+              Qualtrics
+              <ExternalLink size={18} />
             </a>
             <span style={companyMetaStyle}>Cracow · Full-stack</span>
           </div>
@@ -258,6 +277,10 @@ const About = () => {
               </div>
             ))}
           </div>
+
+          <p style={techNoteStyle}>
+            I always stay open to new technologies.
+          </p>
         </section>
       </div>
     </div>

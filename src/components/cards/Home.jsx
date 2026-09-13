@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import profile from '../../assets/images/profile-1.jpg';
-import cvPDF from '../../assets/TomaszFurgala.pdf';
+// import cvPDF from '../../assets/TomaszFurgala.pdf';
 import { Link } from 'react-scroll';
 import ExternalLink from '../../assets/icons/ExternalLink';
 import {
@@ -19,7 +19,6 @@ import {
   GRADIENT_HERO,
   NAVBAR_HEIGHT,
   NAVBAR_SCROLL_OFFSET,
-  QUALTRICS_URL,
   SECTION_MAX_WIDTH,
   SHADOW_IMAGE,
   SIZE_BODY,
@@ -178,7 +177,7 @@ const getProfileImageStyle = (frameWidth, frameHeight) => {
 const Home = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= BREAKPOINT_MOBILE);
   const [primaryHovered, setPrimaryHovered] = useState(false);
-  const [secondaryHovered, setSecondaryHovered] = useState(false);
+  // const [secondaryHovered, setSecondaryHovered] = useState(false);
   const [companyHovered, setCompanyHovered] = useState(false);
 
   useEffect(() => {
@@ -202,7 +201,7 @@ const Home = () => {
 
   const textAlignStyle = isMobile ? { margin: '0 auto' } : {};
 
-  const openCV = () => window.open(cvPDF, '_blank');
+  // const openCV = () => window.open(cvPDF, '_blank');
 
   return (
     <section id="home" style={sectionStyle}>
@@ -211,20 +210,20 @@ const Home = () => {
           <p style={labelStyle}>Hi, I'm Tomasz</p>
           <h1 style={headingStyle}>
             Software Engineer
-            <span style={atCompanyRowStyle}>
+            {/* <span style={atCompanyRowStyle}>
               <a
-                href={QUALTRICS_URL}
+                href={}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={getCompanyLinkStyle(companyHovered)}
                 onMouseEnter={() => setCompanyHovered(true)}
                 onMouseLeave={() => setCompanyHovered(false)}
-                aria-label="Qaltrics website"
+                aria-label=" website"
               >
-                at Qaltrics
+                at 
                 <ExternalLink size={24} />
               </a>
-            </span>
+            </span> */}
           </h1>
           <div style={{ ...credentialsStyle, justifyContent: isMobile ? 'center' : 'flex-start' }}>
             <span>B.Sc. Computer Science, AGH</span>
@@ -256,6 +255,7 @@ const Home = () => {
             >
               View Projects
             </Link>
+            {/*
             <button
               type="button"
               onClick={openCV}
@@ -268,6 +268,7 @@ const Home = () => {
             >
               Download CV
             </button>
+            */}
           </div>
         </div>
 

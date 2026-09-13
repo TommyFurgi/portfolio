@@ -151,7 +151,7 @@ const Education = () => {
             <h4 style={blockTitleStyle}>Master&apos;s</h4>
             <div style={degreeHeaderStyle}>
               <h5 style={degreeTitleStyle}>M.Sc. Computer Science</h5>
-              <span style={dateStyle}>Mar 2026 – Present</span>
+              <span style={dateStyle}>Mar 2026 - Present</span>
             </div>
             <p style={paragraphStyle}>
               Deepening my knowledge in numerical methods, computational intelligence, and
@@ -166,7 +166,7 @@ const Education = () => {
             <h4 style={blockTitleStyle}>Bachelor&apos;s</h4>
             <div style={degreeHeaderStyle}>
               <h5 style={degreeTitleStyle}>B.Sc. Computer Science</h5>
-              <span style={dateStyle}>Oct 2022 – Jan 2026</span>
+              <span style={dateStyle}>Oct 2022 - Jan 2026</span>
             </div>
             <p style={paragraphStyle}>
               Completed a curriculum focused on software development, distributed systems,
